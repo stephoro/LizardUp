@@ -1,0 +1,183 @@
+<html>
+
+    <head>
+		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+
+    <body>
+        <style>
+            @font-face {
+                font-family: mozart;
+                src: url(./resource/mozart.ttf);
+            }
+            body {
+                font-family: mozart;
+                margin: 0px;
+				
+				cursor: default;
+				 -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            #shop {
+                position: relative;
+                min-width: 100%;
+                min-height: 100%;
+                text-align:center;
+               
+            }
+            .item {
+                text-align: center;
+            }
+            .img {
+				position: relative;
+				width: 32px;
+                height: 32px;
+                display:inline-block;
+            }
+			
+			.prompt{
+					
+            -webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+            cursor:default;			
+			
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+			.prm{
+				position: absolute;
+				top:32px;
+				margin-bottom: 32px;
+				left: 32px;
+				right: 32px;
+			}
+			.rpp{
+				cursor: pointer;
+				position: relative;
+				margin: 12px;
+			}
+		.tl{
+			position: absolute;
+			left:-11px;
+			top:-11px;
+			background-image:url(imgs/TL.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.tr{
+			position: absolute;
+			right:-11px;
+			top:-11px;
+			background-image:url(imgs/TR.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.bl{
+			position: absolute;
+			left:-11px;
+			bottom:-11px;
+			background-image:url(imgs/BL.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.br{
+			position: absolute;
+			right:-11px;
+			bottom:-11px;
+			background-image:url(imgs/BR.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.left{
+			position: absolute;
+			left:-11px;
+			top:0px;
+			height: 100%;
+			width:8px;
+			border: solid;
+			border-color: #c0c8d6;/*c0c8d6*/
+			border-width:0 0 0 4px;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.bottom{
+			position: absolute;
+			left:0px;
+			bottom:-11px;
+			width: 100%;
+			height:8px;
+			border: solid;
+			border-color: #c0c8d6;/*c0c8d6*/
+			border-width:0 0 4px 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.right{
+			position: absolute;
+			top:0px;
+			right:-11px;
+			height: 100%;
+			width: 8px;
+			border: solid;
+			border-color: #cddde9;/*c0c8d6*/
+			border-width:0 4px 0 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.top{
+			position: absolute;
+			left:0px;
+			top:-11px;
+			width: 100%;
+			height:8px;
+			border: solid;
+			border-color: #cddde9;/*c0c8d6*/
+			border-width:4px 0 0 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.cont{
+						padding: 1px;
+
+		}
+			.background{
+				
+				width: 100%;
+				height: 110%;
+				position: fixed;
+						border: 0px;
+}
+						a{
+							text-decoration: none;
+							color: black;
+						}
+			.big{
+				font-size: 32px;
+			}
+#hider{
+					position: fixed;
+					top:0px;
+					left:0px;
+					width: 100%;
+					height: 100%;
+					background-color: #000000;
+					z-index: 10;
+				}
+        </style>
+		<iframe src="menu.html" class = "background"></iframe>
+        <div id="shop">
+            
+			<div class="prompt prm"><div class="top"></div><div class="left"></div><div class="bottom"></div><div class="right"></div><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="cont big">There is as of yet no ability to remove ads installed in this game. Please understand that the advertisements support the developer in all their endeavours and fund their work on future developments.<br><br>Ads will be removable in a future update.<br><br><div class="prompt rpp" id = "rpp"><div class="top"></div><div class="left"></div><div class="bottom"></div><div class="right"></div><div class="tl"></div><div class="tr"></div><div class="bl"></div><div class="br"></div><div class="cont">Back<div class="conten"></div></div></div></div></div>
+        </div>
+		<div id="hider">&nbsp;</div>
+		<script src="js/shopReal.js"></script>
+    </body>
+
+</html>

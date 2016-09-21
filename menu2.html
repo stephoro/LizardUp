@@ -1,0 +1,228 @@
+<html>
+  <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <style>
+		@font-face {
+    font-family: mozart;
+    src: url(./resource/mozart.ttf);
+}
+        body{
+			font-family:mozart;
+        margin:0px;
+        text-align:center;
+        			background-color: #ffffff;
+
+        }
+		#game{
+        position:relative;
+			z-index:-1;
+		}
+        .ready{
+            width:288px;
+            position:absolute;
+            left:50%;
+            margin-left:-144px;
+            top:50%;
+            margin-top:-85px;
+            
+            text-align:center;
+            
+			
+			color:#ffffff;
+			
+			
+            font-size:2em;
+
+        }
+        .ok{
+            color:#ffffff;
+            width:100%;
+            cursor:pointer;
+			border:solid;
+			border-width: 4px 0px 0px 0px;
+			border-color: #c0c8d6;
+        }
+		.SCORE{
+			position:absolute;
+			color:#ffffff;
+			text-align:right;
+			bottom:12px;
+			right:12px;
+            font-size:16px;
+			height:16px;
+
+			line-height: 16px;	
+			vertical-align: center;
+		}
+		.COIN{
+			position:absolute;
+			color:#ffffff;
+			text-align:right;
+			bottom:56px;
+			right:12px;
+            font-size:16px;
+			height:16px;
+
+			line-height: 16px;	
+			vertical-align: center;
+		}
+		.prompt{
+			position: absolute;
+			
+            -webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+            cursor:default;			
+			
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.tl{
+			position: absolute;
+			left:-12px;
+			top:-12px;
+			background-image:url(imgs/TL.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.tr{
+			position: absolute;
+			right:-12px;
+			top:-12px;
+			background-image:url(imgs/TR.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.bl{
+			position: absolute;
+			left:-12px;
+			bottom:-12px;
+			background-image:url(imgs/BL.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.br{
+			position: absolute;
+			right:-12px;
+			bottom:-12px;
+			background-image:url(imgs/BR.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.left{
+			position: absolute;
+			left:-12px;
+			top:0px;
+			height: 100%;
+			width:8px;
+			border: solid;
+			border-color: #c0c8d6;/*c0c8d6*/
+			border-width:0 0 0 4px;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.bottom{
+			position: absolute;
+			left:0px;
+			bottom:-12px;
+			width: 100%;
+			height:8px;
+			border: solid;
+			border-color: #c0c8d6;/*c0c8d6*/
+			border-width:0 0 4px 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.right{
+			position: absolute;
+			top:0px;
+			right:-12px;
+			height: 100%;
+			width: 8px;
+			border: solid;
+			border-color: #cddde9;/*c0c8d6*/
+			border-width:0 4px 0 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.top{
+			position: absolute;
+			left:0px;
+			top:-12px;
+			width: 100%;
+			height:8px;
+			border: solid;
+			border-color: #cddde9;/*c0c8d6*/
+			border-width:4px 0 0 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.cont{
+            			overflow: hidden;
+
+		}
+        .black{
+                			background-color: #000000;
+                            width:100%;
+                            height:90px;
+        }
+		.hidden{
+			display: none;
+		}
+
+		#music{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+            cursor:pointer;
+			font-size: 16px;
+			width: 16px;
+			height: 16px;
+			margin: 12px;
+			color: #ffffff;
+		}
+		.musin{
+			background-image:url(imgs/musicon.png);
+            background-size: 16px 16px;
+			width: 16px;
+			height: 16px;
+		}
+		.musof{
+			background-image:url(imgs/musicoff.png);
+            background-size: 16px 16px;
+			width: 16px;
+			height: 16px;
+			
+		}
+    </style>
+
+	  <div class="prompt hidden">
+	 	 <div class="TL"></div>
+		 <div class="TR"></div>
+		 <div class="BL"></div>
+		 <div class="BR"></div>
+	 	 <div class="TOP"></div>
+	 	 <div class="LEFT"></div>
+	 	 <div class="BOTTOM"></div>
+	 	 <div class="RIGHT"></div>
+		 <div class="cont">HELLO</div>
+	 </div>
+	  <div id="game">&nbsp;</div>
+
+	  
+	  <script src="./js/buzzmin.js"></script>
+      <script src="./js/gameEngineMenu.js"></script>
+      <script src="./js/gameBackground.js"></script>
+      <script src="./js/bindingsMenu.js"></script>
+  </body>
+</html>

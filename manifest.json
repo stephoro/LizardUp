@@ -1,0 +1,19 @@
+{
+"manifest_version": 2,
+"name": "Get Me Out of Here",
+"description": "Help me out here.",
+"version": "0.1",
+"icons": {
+"128": "128.png"
+},
+"permissions": [
+"storage",
+"fullscreen",
+{"fileSystem": ["write", "retainEntries", "directory"]}
+],
+"app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}

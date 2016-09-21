@@ -1,0 +1,355 @@
+<html>
+
+    <head>
+		 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+
+    <body>
+        <style>
+            @font-face {
+                font-family: mozart;
+                src: url(./resource/mozart.ttf);
+            }
+            body {
+                font-family: mozart;
+                margin: 0px;
+				cursor: default;
+				 -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            #shop {
+                position: relative;
+                min-width: 100%;
+                min-height: 100%;
+                text-align:center;
+               
+            }
+            .item {
+                text-align: center;
+            }
+            .img {
+				position: relative;
+				width: 32px;
+                height: 32px;
+                display:inline-block;
+            }
+			.imgMag {
+				position: absolute;
+                background-image:url(imgs/magnet_2x.png);
+                background-size: 18px 16px;
+                width: 18px;
+                height: 16px;
+				left: 0px;
+				top:0px;
+				margin-top:8px;
+                display:inline-block;
+            }
+			.imgBal {
+				position: absolute;
+                background-image:url(imgs/singBalloon_2x.png);
+                background-size: 10px 36px;
+                width: 10px;
+                height: 32px;
+				left: 0px;
+				top:0px;
+                display:inline-block;
+            }
+			.imgMulti {
+				position: absolute;
+                background-image:url(imgs/multi_2x.png);
+                background-size: 18px 18px;
+                width: 18px;
+                height: 18px;
+				left: 0px;
+				top:0px;
+				margin-top: 7px;
+                display:inline-block;
+            }
+			.imgMulti3 {
+				position: absolute;
+                background-image:url(imgs/multi3_2x.png);
+                background-size: 18px 18px;
+                width: 18px;
+                height: 18px;
+				left: 0px;
+				top:0px;
+				margin-top: 7px;
+                display:inline-block;
+            }
+			.imgMulti4 {
+				position: absolute;
+                background-image:url(imgs/multi4_2x.png);
+                background-size: 18px 18px;
+                width: 18px;
+                height: 18px;
+				left: 0px;
+				top:0px;
+				margin-top: 7px;
+                display:inline-block;
+            }
+			.imgMulti5 {
+				position: absolute;
+                background-image:url(imgs/multi5_2x.png);
+                background-size: 18px 18px;
+                width: 18px;
+                height: 18px;
+				left: 0px;
+				top:0px;
+				margin-top: 7px;
+                display:inline-block;
+            }
+			.imgSpeed {
+				position: absolute;
+                background-image:url(imgs/speed_2x.png);
+                background-size: 22px 10px;
+                width: 22px;
+                height: 10px;
+				left: 0px;
+				top:0px;
+				margin-top: 11px;
+                display:inline-block;
+            }
+			.imgTime {
+				position: absolute;
+                background-image:url(imgs/clock_2x.png);
+                background-size: 18px 18px;
+                width: 18px;
+                height: 18px;
+				left: 0px;
+				top:0px;
+				margin-top: 7px;
+                display:inline-block;
+            }
+            .buybtn {
+                position: absolute;
+				background-image:url(imgs/buyBtn.png);
+				background-size: 60px 32px;
+                
+                right:0px;
+                width: 60px;
+                height: 32px;
+                line-height: 32px;
+                vertical-align: middle;
+                display:inline-block;
+				cursor: pointer;
+            }
+            .title {
+                height: 32px;
+                line-height: 32px;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .barcontainer {
+                position: relative;
+                width: 100%;
+                height:32px;
+                line-height: 32px;
+            }
+			.coinDisplay {
+				z-index: 5;
+                position: fixed;
+				top:100%;
+				left:50%;
+				margin-top: -50px;
+				margin-left: -162px;
+				border: solid;
+				width: 320px;
+				border-width: 2px 2px 0 2px;
+				background-color: #0EBE50;
+				border-color: #00F07D;
+                height:32px;
+                line-height: 32px;
+				text-align: center;
+            }
+            .barholder {
+                position: absolute;
+                height: 32px;
+                width: 320px;
+                left: 50%;
+                margin-left: -160px;
+                vertical-align: middle;
+                cursor: default;
+            }
+            .bar {
+                position: absolute;
+                display: inline-block;
+                left:0px;
+                background-image:url(imgs/UpgradeBar.png);
+				background-size: 256px 32px;
+                width:256px;
+                height:32px;
+
+            }
+			.barOver{
+				position: absolute;
+				
+				left: 0px;
+				top: 0px;
+				
+				
+			}
+            .barinner {
+                background-image:url(imgs/UpgradeBarOver.png);
+				background-size: 256px 32px;
+                height:32px;
+                width:100px;
+            }
+            .coin {
+				position: relative;
+                width:12px;
+                height:12px;
+                display: inline-block;
+            }
+            .coinInner {
+                position: absolute;
+                top: 1px;
+                background-image: url(imgs/coin.png);
+                background-size: 12px 12px;
+                width:12px;
+                height:12px;
+            }
+            .coinVal {
+                display: inline-block;
+            }
+			.prompt{
+						
+            -webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+            cursor:default;			
+			
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.tl{
+			position: absolute;
+			left:-11px;
+			top:-11px;
+			background-image:url(imgs/TL.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.tr{
+			position: absolute;
+			right:-11px;
+			top:-11px;
+			background-image:url(imgs/TR.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.bl{
+			position: absolute;
+			left:-11px;
+			bottom:-11px;
+			background-image:url(imgs/BL.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.br{
+			position: absolute;
+			right:-11px;
+			bottom:-11px;
+			background-image:url(imgs/BR.png);
+            background-size: 12px 12px;
+            width: 12px;
+			height: 12px;
+		}
+		.left{
+			position: absolute;
+			left:-11px;
+			top:0px;
+			height: 100%;
+			width:8px;
+			border: solid;
+			border-color: #c0c8d6;/*c0c8d6*/
+			border-width:0 0 0 4px;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.bottom{
+			position: absolute;
+			left:0px;
+			bottom:-11px;
+			width: 100%;
+			height:8px;
+			border: solid;
+			border-color: #c0c8d6;/*c0c8d6*/
+			border-width:0 0 4px 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.right{
+			position: absolute;
+			top:0px;
+			right:-11px;
+			height: 100%;
+			width: 8px;
+			border: solid;
+			border-color: #cddde9;/*c0c8d6*/
+			border-width:0 4px 0 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.top{
+			position: absolute;
+			left:0px;
+			top:-11px;
+			width: 100%;
+			height:8px;
+			border: solid;
+			border-color: #cddde9;/*c0c8d6*/
+			border-width:4px 0 0 0;
+			background-color: #c8d3da;/*c0c8d6*/
+		}
+		.cont{
+						padding: 1px;
+            			overflow: hidden;
+
+		}
+			.background{
+				
+				width: 100%;
+				height: 110%;
+				position: fixed;
+				margin-top: -12px;
+						border: 0px;
+}
+			.back{
+				position: relative;
+				cursor: pointer;
+				height: 18px;
+				font-size: 22px;
+				width:296px;
+				left:50%;
+				margin:12px;
+				margin-left:-148px;
+			}
+				#hider{
+					position: fixed;
+					top:0px;
+					left:0px;
+					width: 100%;
+					height: 100%;
+					background-color: #000000;
+					z-index: 10;
+				}
+
+        </style>
+		<iframe src="menu.html" class = "background"></iframe>
+        <div id="shop">
+            
+                
+        </div>
+		<div id="hider">&nbsp;</div>
+        <script src="./js/shop.js">
+            
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,1 @@
+GameEngine.whamo=1;
